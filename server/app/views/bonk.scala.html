@@ -1,0 +1,31 @@
+@(title: String, table: Array[Array[Int]])
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>@title</title>
+    <!-- <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+    <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")"> -->
+
+    <!-- Libraries for React -->
+    <!-- <script src="https://unpkg.com/react@@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@@16/umd/react-dom.development.js" crossorigin></script> -->
+  </head>
+  <body>
+    <h1>Wow</h1>
+    <table>
+        @for(x <- table){<tr>@for(y <- x){<td>@y</td>}</tr>}
+    </table>
+  </body>
+  <style>
+    td{
+      border: solid red 1px;
+      margin: 0;
+      text-align: center;
+    }
+    table{
+      width: 100vw;
+      margin: 0;
+    }
+  </style>
+</html>
