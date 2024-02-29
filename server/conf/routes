@@ -4,9 +4,10 @@
 
 # Home page
 GET        /                             controllers.Application.index
-GET        /Bonk                         controllers.Application.bonk
-
-
+GET        /form                          controllers.Application.form
+GET        /spank                        controllers.Application.spank(name,color)
++nocsrf
+POST       /scooby                       controllers.Application.scooby
 # Prefix must match `play.assets.urlPrefix`
 GET        /assets/*file                 controllers.Assets.at(file)
 GET        /versionedAssets/*file        controllers.Assets.versioned(path="/public", file: Asset)
