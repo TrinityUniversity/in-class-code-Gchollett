@@ -6,8 +6,10 @@
 GET        /                             controllers.Application.index
 GET        /form                          controllers.Application.form
 GET        /spank                        controllers.Application.spank(name,color)
+GET        /count                       controllers.Application.count()
 +nocsrf
 POST       /scooby                       controllers.Application.scooby
+GET        /increment                   controllers.Application.increment()
 # Prefix must match `play.assets.urlPrefix`
 GET        /assets/*file                 controllers.Assets.at(file)
 GET        /versionedAssets/*file        controllers.Assets.versioned(path="/public", file: Asset)
